@@ -77,7 +77,7 @@ TARGET_DISPLAY_USE_RETIRE_FENCE := true
 TARGET_QCOM_MEDIA_VARIANT := caf
 
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_RECOVERY_UI_LIB := librecovery_ui_mako
+# TARGET_RECOVERY_UI_LIB := librecovery_ui_mako
 
 TARGET_RECOVERY_FSTAB = device/lge/gee-common/ramdisk/fstab.qcom
 TARGET_USERIMAGES_USE_EXT4 := true
