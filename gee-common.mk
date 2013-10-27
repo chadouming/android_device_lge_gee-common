@@ -45,7 +45,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
 	device/lge/gee-common/wifi/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
 	device/lge/gee-common/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-	device/lge/gee-common/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin
+	device/lge/gee-common/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
+	device/lge/gee-common/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+	device/lge/gee-common/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
 PRODUCT_COPY_FILES += \
 	device/lge/gee-common/audio/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
@@ -126,7 +128,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Script for baseband name resolution
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/fetch-swv:system/bin/fetch-swv
+    $(LOCAL_PATH)/ramdisk/fetch-swv:system/bin/fetch-swv
 
 # Audio Configuration
 # FIXME: Remove persist.audio.handset.mic and persist.audio.fluence.mode
@@ -225,10 +227,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	keystore.msm8960
 
-PRODUCT_PACKAGES += \
-	wpa_supplicant_overlay.conf \
-	p2p_supplicant_overlay.conf
-
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	rild.libpath=/system/lib/libril-qc-qmi-1.so \
 	ro.config.ehrpd=true \
@@ -254,6 +252,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.qc.sensors.wl_dis=true \
 	ro.qualcomm.sensors.smd=true
+
+#Disable onscreen button
+PRODUCT_PROPERTY_OVERRIDES += \
+	qemu.hw.mainkeys=1
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mtp
