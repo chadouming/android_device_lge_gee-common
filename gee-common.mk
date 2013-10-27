@@ -253,10 +253,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.qc.sensors.wl_dis=true \
 	ro.qualcomm.sensors.smd=true
 
-#Disable onscreen button
-PRODUCT_PROPERTY_OVERRIDES += \
-	qemu.hw.mainkeys=1
-
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mtp
 
