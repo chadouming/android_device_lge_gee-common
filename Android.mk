@@ -23,4 +23,6 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-include $(call first-makefiles-under,$(LOCAL_PATH))
+ifneq ($(filter geeb geespr,$(TARGET_DEVICE)),)
+	include $(call first-makefiles-under,$(LOCAL_PATH))
+endif
