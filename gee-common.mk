@@ -241,9 +241,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	rild.libpath=/system/lib/libril-qc-qmi-1.so
 
 PRODUCT_PROPERTY_OVERRIDES += \
-	telephony.lteOnCdmaDevice=0
-
-PRODUCT_PROPERTY_OVERRIDES += \
 	drm.service.enabled=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
