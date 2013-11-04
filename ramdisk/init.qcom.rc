@@ -208,7 +208,15 @@ on post-fs-data
     rm /data/local/tmp/adreno_config.txt
 
     # LED On/Off synchronization
-    chown system system /sys/class/leds/red/device/lock
+    chown system system /sys/class/leds/led:red/device/lock
+
+    chmod 644 /sys/class/leds/button-backlight/brightness
+    chmod 644 /sys/class/leds/led:red/brightness
+    chmod 644 /sys/class/leds/led:green/brightness
+
+    chown system system /sys/class/leds/button-backlight/brightness
+    chown system system /sys/class/leds/led:red/brightness
+    chown system system /sys/class/leds/led:green/brightness
 
     # communicate with mpdecision and thermald
     mkdir /dev/socket/mpdecision 0770 system system
