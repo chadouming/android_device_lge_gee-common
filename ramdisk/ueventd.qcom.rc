@@ -36,7 +36,6 @@
 /dev/msm_camera/*         0660   system     camera
 /dev/gemini*              0660   system     camera
 /dev/msm_dsps             0600   system     system
-/dev/bcm2079x-i2c         0660   nfc        nfc
 /dev/qseecom              0660   system     drmrpc
 /dev/mdm                  0660   system     radio
 /dev/ttyUSB0              0660   system     system
@@ -44,3 +43,10 @@
 /dev/block/mmcblk0p9      0660   system     system
 /dev/ks_hsic_bridge       0660   system     system
 /dev/efs_hsic_bridge      0660   system     system
+# yongmin.jung@lge.com 2012.07.10 change qcks, ks, efsks into system process
+/dev/block/mmcblk0p12     0660   system     system
+/dev/block/mmcblk0p13     0660   system     system
+/dev/block/mmcblk0p14     0660   system     system
+
+# Optimus G nfc port
+/dev/pn544                0600   nfc        nfc
