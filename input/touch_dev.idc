@@ -18,15 +18,31 @@
 
 device.internal = 1
 
+# Basic Parameters
 touch.deviceType = touchScreen
 touch.orientationAware = 1
 
+# Gesture Mode Parameters
+touch.gestureMode = spots
+
+# Size
 touch.size.calibration = diameter
-touch.size.scale = 22.5
+touch.size.scale = 1
 touch.size.bias = 0
 touch.size.isSummed = 0
 
-touch.pressure.calibration = amplitude
-touch.pressure.scale = 0.0125
+# Pressure
+# Driver reports signal strength as pressure.
+#
+# A normal thumb touch typically registers about 200 signal strength
+# units although we don't expect these values to be accurate.
+touch.pressure.calibration = physical
+touch.pressure.scale = 0.001
 
+# Orientation
 touch.orientation.calibration = none
+
+touch.distance.calibration = none
+touch.distance.scale = 1
+
+keyboard.layout = keypad_8064
