@@ -134,6 +134,7 @@
 /system/lib/liboemcamera.so
 /system/lib/liboemcrypto.so
 /system/lib/libqcci_legacy.so
+/system/lib/libqc-opt.so
 /system/lib/libqdi.so
 /system/lib/libqdp.so
 /system/lib/libqmi.so
