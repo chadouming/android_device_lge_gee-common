@@ -60,7 +60,7 @@ PRODUCT_COPY_FILES += \
 	device/lge/gee-common/ramdisk/init.qcom.rc:root/init.qcom.rc \
 	device/lge/gee-common/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc \
 	device/lge/gee-common/ramdisk/fstab.qcom:root/fstab.qcom \
-	device/lge/gee-common/ramdisk/twrp.fstab:root/etc/twrp.fstab \
+	device/lge/gee-common/ramdisk/twrp.fstab:recovery/root/etc/twrp.fstab \
 	device/lge/gee-common/ramdisk/ueventd.qcom.rc:root/ueventd.qcom.rc \
 	device/lge/gee-common/conf/media_profiles.xml:system/etc/media_profiles.xml \
 	device/lge/gee-common/audio/media_codecs.xml:system/etc/media_codecs.xml \
