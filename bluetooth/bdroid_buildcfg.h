@@ -20,4 +20,8 @@
 #define BTM_DEF_LOCAL_NAME   "Optimus G"
 #define BTA_DISABLE_DELAY 1000 /* in milliseconds */
 #define BTA_HOST_INTERLEAVE_SEARCH TRUE
+
+#define BLE_INCLUDED TRUE
+#define BTA_GATT_INCLUDED TRUE
+#define SMP_INCLUDED TRUE
 #endif
