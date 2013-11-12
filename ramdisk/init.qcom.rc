@@ -40,7 +40,7 @@ on init
     symlink /mnt/shell/emulated/0 /storage/emulated/legacy
 
     # External SD card support
-    mkdir /storage/sdcard1 0000 system system
+    mkdir /storage/sdcard1 0700 root root
     export SECONDARY_STORAGE /storage/sdcard1
     symlink /storage/sdcard1 /external_sd
 
