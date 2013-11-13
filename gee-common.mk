@@ -105,8 +105,7 @@ PRODUCT_PACKAGES += \
 	libnfc \
 	libnfc_jni \
 	Nfc \
-	Tag \
-	com.android.nfc_extras
+	Tag 
 
 # NFCEE access control
 ifeq ($(TARGET_BUILD_VARIANT),user)
@@ -118,7 +117,6 @@ endif
 # NFC access control + feature files + configuration
 PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml \
-    frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
 
