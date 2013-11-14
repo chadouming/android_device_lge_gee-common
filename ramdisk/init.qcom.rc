@@ -29,10 +29,6 @@ on init
     mkdir /persist 0771 system system
     mkdir /firmware 0771 system system
 
-    export EXTERNAL_STORAGE /storage/emulated/legacy
-    export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
-    export EMULATED_STORAGE_TARGET /storage/emulated
-
     # Support legacy paths
     symlink /storage/emulated/legacy /sdcard
     symlink /storage/emulated/legacy /mnt/sdcard
@@ -40,9 +36,16 @@ on init
     symlink /mnt/shell/emulated/0 /storage/emulated/legacy
 
     # External SD card support
+    mkdir /mnt/media_rw/sdcard1 0700 media_rw media_rw
     mkdir /storage/sdcard1 0700 root root
+
+    export EXTERNAL_STORAGE /storage/emulated/legacy
+    export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
+    export EMULATED_STORAGE_TARGET /storage/emulated
     export SECONDARY_STORAGE /storage/sdcard1
-    symlink /storage/sdcard1 /external_sd
+
+    mkdir /sns 0775 system system
+    mkdir /sns/cal 0771 system system
 
     # Setup custom emergency number list based on
     # the MCC. This is needed by RIL.
@@ -355,6 +358,10 @@ service charger /charger
 # virtual sdcard daemon running as media_rw (1023)
 service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
     class late_start
+
+service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
+    class late_start
+    disabled
 
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
