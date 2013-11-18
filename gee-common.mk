@@ -262,5 +262,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mtp
 
+PRODUCT_RUNTIMES := \
+	runtime_libdvm_default 
+
+PRODUCT_RUNTIMES += \
+	runtime_libart
+
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, hardware/qcom/msm8960/msm8960.mk)
