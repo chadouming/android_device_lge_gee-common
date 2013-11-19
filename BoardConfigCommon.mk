@@ -22,7 +22,6 @@ TARGET_CPU_SMP := true
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := krait
-TARGET_MPDECISION_BOOST_SOCKET := /dev/socket/mpdecision/touchboost
 
 # Krait optimization 
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
@@ -78,8 +77,6 @@ WIFI_DRIVER_FW_PATH_AP  := "ap"
 
 BOARD_EGL_CFG := device/lge/gee-common/conf/egl.cfg
 
-#BOARD_USES_HGL := true
-#BOARD_USES_OVERLAY := true
 USE_OPENGL_RENDERER := true
 TARGET_USES_ION := true
 TARGET_USES_OVERLAY := true
@@ -160,8 +157,6 @@ RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 BOARD_HAS_NO_REAL_SDCARD := true
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-#TARGET_RECOVERY_INITRC := device/samsung/tuna/init.recovery.rc
-#TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_JB_CRYPTO := true
 TW_FLASH_FROM_STORAGE := true
 TW_NO_USB_STORAGE := true
