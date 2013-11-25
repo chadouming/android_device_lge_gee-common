@@ -101,11 +101,6 @@
         <item>255</item>
     </integer-array>
 
-    <!--
-    Boolean indicating whether we want button brightness support 
-    -->
-    <bool name="config_button_brightness_support">true</bool>
-
     <!-- Minimum screen brightness allowed by the power manager. -->
     <integer name="config_screenBrightnessDim">1</integer>
 
@@ -243,20 +238,6 @@
 
          This value has been tuned for the "mako" device. -->
     <dimen name="config_minScalingSpan">35mm</dimen>
-
-    <!--
-    Hardware 'face' keys present on the device, stored as a bit field.
-         This integer should equal the sum of the corresponding value for each
-         of the following keys present:
-             1 - Home
-             2 - Back
-             4 - Menu
-             8 - Assistant (search)
-            16 - App switch
-         For example, a device with Home, Back and Menu keys would set this
-         config to 7. 
-     -->
-     <integer name="config_deviceHardwareKeys">7</integer>
 
     <!-- Setting this true forces the headset jack switches to use the/dev/input/event subsystem
          rather than the uevent framework. -->

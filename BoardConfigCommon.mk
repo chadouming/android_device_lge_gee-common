@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 
-TARGET_GLOBAL_CFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
+TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
@@ -37,6 +37,8 @@ ARCH_ARM_HIGH_OPTIMIZATION := true
 
 # Enable various prefetch optimizations
 COMMON_GLOBAL_CFLAGS += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64
+
+TARGET_USE_O3 := true
 
 TARGET_NO_BOOTLOADER := true
 
@@ -83,12 +85,6 @@ TARGET_USES_ION := true
 TARGET_USES_OVERLAY := true
 TARGET_USES_SF_BYPASS := true
 TARGET_USES_C2D_COMPOSITON := true
-TARGET_DISPLAY_USE_RETIRE_FENCE := true
-
-BOARD_USES_QCOM_HARDWARE := true
-COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DQCOM_BSP
-TARGET_USES_QCOM_BSP := true
-TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
