@@ -359,7 +359,7 @@ service charger /charger
 service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
     class late_start
 
-service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
+service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
     class late_start
     disabled
 
@@ -368,7 +368,7 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     user camera
     group camera system inet input
 
-service conn_init /system/bin/logwrapper /system/bin/conn_init
+service conn_init /system/bin/conn_init
     class late_start
     user system
     group system wifi
@@ -393,7 +393,7 @@ service qseecomd /system/bin/qseecomd
     user system
     group system
 
-service diag_mdlog /system/bin/logwrapper /system/bin/diag_mdlog -s 100
+service diag_mdlog /system/bin/diag_mdlog -s 100
     class late_start
     disabled
 
